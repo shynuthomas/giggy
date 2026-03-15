@@ -1,0 +1,74 @@
+{
+  "materials": [
+    {
+      "id": "python-data-analysis-bootcamp",
+      "title": "Python Data Analysis Bootcamp",
+      "category": "Data Science",
+      "level": "Beginner",
+      "price": 49.0,
+      "currency": "USD",
+      "rating": 4.7,
+      "enrollments_last_30_days": 340,
+      "wishlist_adds_last_30_days": 190,
+      "published_at": "2026-01-20",
+      "image_url": "https://images.example.com/python-data-analysis.jpg",
+      "product_url": "/materials/python-data-analysis-bootcamp"
+    },
+    {
+      "id": "genai-prompt-engineering-masterclass",
+      "title": "GenAI Prompt Engineering Masterclass",
+      "category": "Artificial Intelligence",
+      "level": "Intermediate",
+      "price": 79.0,
+      "currency": "USD",
+      "rating": 4.8,
+      "enrollments_last_30_days": 520,
+      "wishlist_adds_last_30_days": 410,
+      "published_at": "2026-02-15",
+      "image_url": "https://images.example.com/genai-prompts.jpg",
+      "product_url": "/materials/genai-prompt-engineering-masterclass"
+    },
+    {
+      "id": "fullstack-typescript-projects",
+      "title": "Fullstack TypeScript Projects",
+      "category": "Programming",
+      "level": "Intermediate",
+      "price": 59.0,
+      "currency": "USD",
+      "rating": 4.6,
+      "enrollments_last_30_days": 290,
+      "wishlist_adds_last_30_days": 160,
+      "published_at": "2025-12-05",
+      "image_url": "https://images.example.com/fullstack-typescript.jpg",
+      "product_url": "/materials/fullstack-typescript-projects"
+    },
+    {
+      "id": "system-design-for-interviews",
+      "title": "System Design for Interviews",
+      "category": "Software Engineering",
+      "level": "Advanced",
+      "price": 69.0,
+      "currency": "USD",
+      "rating": 4.9,
+      "enrollments_last_30_days": 410,
+      "wishlist_adds_last_30_days": 250,
+      "published_at": "2025-11-10",
+      "image_url": "https://images.example.com/system-design.jpg",
+      "product_url": "/materials/system-design-for-interviews"
+    },
+    {
+      "id": "cybersecurity-fundamentals",
+      "title": "Cybersecurity Fundamentals",
+      "category": "Security",
+      "level": "Beginner",
+      "price": 39.0,
+      "currency": "USD",
+      "rating": 4.5,
+      "enrollments_last_30_days": 180,
+      "wishlist_adds_last_30_days": 120,
+      "published_at": "2026-03-01",
+      "image_url": "https://images.example.com/cybersecurity.jpg",
+      "product_url": "/materials/cybersecurity-fundamentals"
+    }
+  ]
+}
