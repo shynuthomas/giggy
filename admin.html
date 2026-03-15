@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | Local Escape</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <h1>Local Escape Admin</h1>
+    <div class="admin-actions">
+      <a class="outline-btn nav-link" href="./index.html">Home</a>
+      <a class="outline-btn nav-link" href="./login.html">Login</a>
+      <button class="outline-btn" id="adminLogoutBtn" type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-panel">
+      <h2 id="adminWelcome">Welcome, Admin</h2>
+      <p>Manage resort and event listings visible on the landing page.</p>
+      <p id="adminMessage" class="form-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="admin-grid">
+      <article class="admin-panel">
+        <h3>Add Resort</h3>
+        <form id="resortForm" class="admin-form" novalidate>
+          <label>Resort Name <input id="resortName" type="text" required></label>
+          <label>Area <input id="resortArea" type="text" required></label>
+          <label>Price Per Night <input id="resortPrice" type="number" min="1" required></label>
+          <label>Description <textarea id="resortDescription" rows="3" required></textarea></label>
+          <button class="primary-btn" type="submit">Add Resort</button>
+        </form>
+      </article>
+
+      <article class="admin-panel">
+        <h3>Add Event</h3>
+        <form id="eventForm" class="admin-form" novalidate>
+          <label>Event Name <input id="eventName" type="text" required></label>
+          <label>Location <input id="eventLocation" type="text" required></label>
+          <label>Event Date <input id="eventDate" type="date" required></label>
+          <label>Ticket Price <input id="eventPrice" type="number" min="1" required></label>
+          <label>Description <textarea id="eventDescription" rows="3" required></textarea></label>
+          <button class="primary-btn" type="submit">Add Event</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="admin-grid">
+      <article class="admin-panel">
+        <h3>Resorts</h3>
+        <div id="adminResortsList" class="admin-list"></div>
+      </article>
+
+      <article class="admin-panel">
+        <h3>Events</h3>
+        <div id="adminEventsList" class="admin-list"></div>
+      </article>
+    </section>
+
+    <section class="admin-panel">
+      <h3>All Bookings</h3>
+      <div id="adminBookingsList" class="admin-list"></div>
+    </section>
+  </main>
+
+  <script src="./app-data.js"></script>
+  <script src="./admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Escape | Resort & Event Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="top-nav">
+      <h1 class="brand">Local Escape</h1>
+      <div class="nav-actions">
+        <a class="outline-btn nav-link" id="loginNavLink" href="./login.html">Login</a>
+        <a class="outline-btn nav-link" href="./admin.html">Admin</a>
+        <button class="outline-btn" id="viewBookingsBtn" type="button">View My Bookings</button>
+        <button class="outline-btn" id="logoutBtn" type="button">Logout</button>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">BOOK RESORTS + LOCAL EXPERIENCES</p>
+      <h2>Plan your perfect stay and events in one place</h2>
+      <p>
+        Discover top resorts near your area and reserve local events with instant booking
+        confirmation.
+      </p>
+      <p class="session-info" id="sessionInfo"></p>
+      <a class="primary-btn" href="#booking">Book Your Spot</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="resortsSection">
+      <div class="section-title">
+        <h3>Popular Resorts</h3>
+        <p>Choose a resort for your weekend getaway.</p>
+      </div>
+      <div class="cards-grid" id="resortsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="eventsSection">
+      <div class="section-title">
+        <h3>Upcoming Local Events</h3>
+        <p>Reserve your event tickets in advance.</p>
+      </div>
+      <div class="cards-grid" id="eventsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section booking" id="booking">
+      <div class="section-title">
+        <h3>Make a Booking</h3>
+        <p>Complete the form and receive an instant confirmation message.</p>
+      </div>
+
+      <form id="bookingForm" novalidate>
+        <div class="form-grid">
+          <label>
+            Booking Type
+            <select id="bookingType" required>
+              <option value="resort">Resort</option>
+              <option value="event">Event</option>
+            </select>
+          </label>
+
+          <label>
+            Select Option
+            <select id="bookingItem" required></select>
+          </label>
+
+          <label>
+            Check-in / Event Date
+            <input id="bookingDate" type="date" required>
+          </label>
+
+          <label>
+            Number of Guests / Tickets
+            <input id="bookingCount" type="number" min="1" max="20" value="2" required>
+          </label>
+
+          <label>
+            Full Name
+            <input id="customerName" type="text" placeholder="Your name" required>
+          </label>
+
+          <label>
+            Contact Number
+            <input id="customerPhone" type="tel" placeholder="+1 555 123 4567" required>
+          </label>
+        </div>
+
+        <label class="full-row">
+          Notes (Optional)
+          <textarea id="notes" rows="3" placeholder="Special requests or additional details"></textarea>
+        </label>
+
+        <button class="primary-btn" type="submit">Confirm Booking</button>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <dialog id="bookingsDialog">
+    <div class="dialog-header">
+      <h3>My Bookings</h3>
+      <button class="outline-btn small" id="closeDialogBtn" type="button">Close</button>
+    </div>
+    <div id="bookingsList" class="bookings-list"></div>
+  </dialog>
+
+  <footer class="footer">
+    <p>Built for local resort and event reservations.</p>
+  </footer>
+
+  <script src="./app-data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
