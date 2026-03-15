@@ -13,7 +13,12 @@
   <header class="hero">
     <nav class="top-nav">
       <h1 class="brand">Local Escape</h1>
-      <button class="outline-btn" id="viewBookingsBtn" type="button">View My Bookings</button>
+      <div class="nav-actions">
+        <a class="outline-btn nav-link" id="loginNavLink" href="./login.html">Login</a>
+        <a class="outline-btn nav-link" href="./admin.html">Admin</a>
+        <button class="outline-btn" id="viewBookingsBtn" type="button">View My Bookings</button>
+        <button class="outline-btn" id="logoutBtn" type="button">Logout</button>
+      </div>
     </nav>
     <div class="hero-content">
       <p class="eyebrow">BOOK RESORTS + LOCAL EXPERIENCES</p>
@@ -22,6 +27,7 @@
         Discover top resorts near your area and reserve local events with instant booking
         confirmation.
       </p>
+      <p class="session-info" id="sessionInfo"></p>
       <a class="primary-btn" href="#booking">Book Your Spot</a>
     </div>
   </header>
@@ -108,6 +114,7 @@
     <p>Built for local resort and event reservations.</p>
   </footer>
 
+  <script src="./app-data.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>
